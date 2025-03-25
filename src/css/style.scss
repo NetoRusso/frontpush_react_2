@@ -106,7 +106,6 @@ li {
 
   .mobile {
     display: none;
-    // background-color: red;
   }
   
   @media screen and (max-width: 680px) {
@@ -571,3 +570,35 @@ li {
 
   }
 }
+
+.context-api { 
+  width: 80%;
+  min-width: 300px;
+  margin: 32px auto;
+  text-align: center;
+}
+
+.user { 
+}
+
+  .input-nome {
+    background-color: #222;
+    height: 32px;
+    width: 200px;
+    margin-right: 16px;
+  }
+
+  .alterar-nome { 
+    background-color: #222;
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+      scale: .95;
+      transition: all 300ms ease-in-out;
+    }
+  }
