@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 
 const TodoListAula = () => {
@@ -17,11 +17,13 @@ const TodoListAula = () => {
 
 
 
-  function addItem() {
-
+  const addItem = useCallback(() => {
     setTarefas([...tarefas, campo])
     setCampo("");
-  }
+  }, [tarefas, campo]);
+
+
+
 
   function handleCampo(e) {
     setCampo(e.target.value)
