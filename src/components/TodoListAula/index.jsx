@@ -6,10 +6,10 @@ const TodoListAula = () => {
   const [tarefas, setTarefas] = useState(() => {
     const tarefasStorage = localStorage.getItem("Array de Tarefas Aula");
     return tarefasStorage ? JSON.parse(tarefasStorage) : [
-      'Acordar Cedo',
-      'Estudar JSES6+',
-      'Lavar o Carro',
-      'Estudar Hooks'
+      // 'Acordar Cedo',
+      // 'Estudar JSES6+',
+      // 'Lavar o Carro',
+      // 'Estudar Hooks'
     ];
   });
 
@@ -36,6 +36,12 @@ const TodoListAula = () => {
 
   return (
     <div className="todoListAula">
+      {
+        tarefas.length > 0 && 
+        (<h3> você tem {tarefas.length} tarefa(s) para completar</h3>) 
+        // :
+        // (<h3> você não tem tarefas para completar</h3>)
+      }
       <ul>
         {
           tarefas.map((item, index) => {
