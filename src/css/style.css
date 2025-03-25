@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fcfcfc;
+  color: #f2f2f2;
 }
 
 html {
@@ -18,9 +19,7 @@ html {
 body {
   background-color: #050607;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+  height: 100%;
   font-family: "Winky Sans", sans-serif;
 }
 
@@ -58,12 +57,64 @@ li {
   font-size: 24px;
 }
 
+.header .menu-desk {
+  width: 80%;
+  margin: 0 auto;
+  min-width: 300px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu-desk img {
+  width: 48px;
+  height: auto;
+}
+.header .menu-desk .menu-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+.header .menu-desk .menu-list-item a {
+  font-family: "Karla", sans-serif;
+  font-style: italic;
+  font-weight: 200;
+  text-decoration: none;
+}
+.header .menu-desk .menu-list-item a:hover {
+  color: #a0d0fd;
+  scale: 0.95;
+  opacity: 0.8;
+  transition: all 300ms ease-in-out;
+}
+.header .menu-mobile {
+  display: none;
+}
+@media screen and (max-width: 580px) {
+  .header .menu-desk {
+    display: none;
+  }
+  .header .menu-mobile {
+    display: block;
+  }
+}
+
 .title {
   margin-top: 48px;
 }
 
 .todoListAula {
   margin-top: 32px;
+  width: 80%;
+  min-width: 300px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .todoListAula .content-addTask {
   height: auto;
@@ -102,9 +153,14 @@ li {
 }
 
 .todoListPersona {
+  margin-top: 32px;
   width: 80%;
   min-width: 300px;
   margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .todoListPersona .tasks {
   width: 100%;
@@ -214,9 +270,14 @@ li {
 }
 
 .todoListPlus {
+  margin-top: 32px;
   width: 80%;
   min-width: 300px;
   margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .todoListPlus .tasks {
   width: 100%;
@@ -283,7 +344,7 @@ li {
 }
 .todoListPlus .content-addTask form .inputs {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   gap: 8px;
   margin-right: 16px;
 }
@@ -300,7 +361,7 @@ li {
   -webkit-appearance: none;
   margin: 0;
 }
-.todoListPlus .content-addTask form button {
+.todoListPlus .content-addTask button {
   background-color: #222;
   padding: 8px 16px;
   border: 0;
@@ -308,19 +369,19 @@ li {
   font-size: 18px;
   cursor: pointer;
 }
-.todoListPlus .content-addTask form button:hover {
+.todoListPlus .content-addTask button:hover {
   opacity: 0.8;
   scale: 0.95;
   transition: all 300ms ease-in-out;
 }
-.todoListPlus .content-addTask form button:disabled {
+.todoListPlus .content-addTask button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
 }
 .todoListPlus .content-concluidos {
   width: 100%;
-  margin-top: 48px;
+  margin: 48px auto;
 }
 .todoListPlus .content-concluidos-lista {
   width: 100%;
